@@ -1,0 +1,43 @@
+1. Describe three or more primitive algorithms used in your day-to-day life.
+
+* What to cook
+DEF COOK(today_dish)
+  IF today_dish == yesterday_dinner
+    RETURN end
+  END IF
+
+  SET ingredients to get_all(ingredients)
+  IF stove is true
+    FOR thing in ingredients
+      IF thing needs to be cooked
+        INSERT thing to pot
+      END IF
+    END FOR
+  END IF
+
+  RETURN pot
+END DEF
+
+* Check emails
+DEF CHECK_EMAIL
+  IF inbox_new is equal to empty
+    RETURN end
+  END IF
+
+  FOR email in inbox_new
+    PRINT email
+  END FOR
+END DEF
+
+* Do Laundry
+DEF DO_LAUNDRY
+  IF laundry_bin is NOT full OR detergent is empty
+    RETURN END
+  END IF
+
+  SET i to 0
+  WHILE laundry_bin is NOT empty
+    INSERT laundry_bin[i] to washer
+    INCREMENT i
+  END WHILE
+END DEF
