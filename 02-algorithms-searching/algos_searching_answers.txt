@@ -1,0 +1,29 @@
+1. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+    It takes 7 iterations to find the value G using linear search.
+
+2. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+    It takes 4 iterations to find the value G using binary search.
+
+3. Calculate fib(10), fib(11), fib(12) by hand.
+    fib_arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+
+    fib(10) = 55
+    fib(11) = 89
+    fib(12) = 144
+
+4. Compare the time it takes to run fib(20) between the iterative solution from the previous checkpoint and recursive solutions.
+    iterative fibonnaci: 9.285984560847282e-06 seconds
+    recursive fibonnaci: 0.0011676130816340446 seconds
+    Iterative fibonnaci is 125.7392874156909 times faster than recursive fibonnaci.
+
+5. Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Would you use an iterative or recursive solution? Explain your reasoning.
+    Linear search is used for unsorted collection. Because binary search doesn't work on an unsorted collection. Binary search compares the target item and the middle item. After comparison, it discards a half of the collection that doesn't include target item. Thus binary search can't be used for an unsorted collection.
+
+6. Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Would you use an iterative or recursive solution? Explain your reasoning.
+    Linear Search time: 8.449889719486237e-06 seconds
+    Binary Search Iterative time: 5.024950951337814e-06 seconds
+    Binary Search Recursive time: 4.336005076766014e-06 seconds
+
+    I would use binary search rather than linear search for a sorted collection. Based on the result above, linear search took almost twice than binary search to find the target item. Because binary search is more efficient than linear search since it doesn't need to search the target item from the beginning of collection.
+
+    (But generally recursive binary search is slower than iterative binary search. Because when a recursion happens, program basically resets all variables and re-allocates memory. That takes time so recursive binary search is usually slower than iterative one. But this highly depends on the environment such as an os, programming language, etc.)
