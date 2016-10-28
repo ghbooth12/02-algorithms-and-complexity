@@ -1,0 +1,13 @@
+Looking at the bar chart, speculate on why you think some sort algorithms are faster than others and provide rationale as to your thought process.
+
+    Insertion Sort[Best: O(n), Worst: O(n^2)]
+    Selection Sort[Best/Worst: O(n^2)]
+    Bubble Sort[Best: O(n), Worst: O(n^2)]
+    Merge Sort[Best: O(n lg n), Worst: O(n lg n)]
+    Quick Sort[Best: O(n^2), Worst: O(n lg n)]
+    Heap Sort[Best/Worst: O(n lg n)]
+    Bucket Sort[Best/Worst: O(n)]
+
+    Quick Sort is fast because it uses spatial locality - it walks neighboring elements, comparing them to the pivot value (which can be stored in a register). It makes very effective use of caching.
+
+    Quick Sort, Heap Sort and Merge Sort are fast.

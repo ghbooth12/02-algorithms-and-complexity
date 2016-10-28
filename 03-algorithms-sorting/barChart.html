@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawStuff);
+        function drawStuff() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Sorting Algorithms');
+          data.addColumn('number', 'Time');
+          data.addRows([
+            ["Insertion Sort", 9.74670983850956e-05],
+            ["Selection Sort", 0.00021768081933259964],
+            ["Bubble Sort", 5.0709815695881844e-05],
+            ["Merge Sort", 0.0001670608762651682],
+            ["Quick Sort", 0.0003114859573543072],
+            ["Heap Sort", 0.00019613001495599747],
+            ['Bucket Sort', 8.90891533344984e-05]
+          ]);
+
+         var options = {
+           title: 'Comparison of Sorting Algorithms',
+           width: 900,
+           height: 800,
+           legend: 'none',
+           bar: {groupWidth: '95%'},
+           vAxis: { gridlines: { count: 8 } }
+         };
+
+         var chart = new google.visualization.ColumnChart(document.getElementById('number_format_chart'));
+         chart.draw(data, options);
+
+         document.getElementById('format-select').onchange = function() {
+           options['vAxis']['format'] = this.value;
+           chart.draw(data, options);
+         };
+      };
+    </script>
+  </head>
+  <body>
+    <div id="number_format_chart">
+  </body>
+</html>
