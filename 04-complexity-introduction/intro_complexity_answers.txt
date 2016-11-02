@@ -1,0 +1,87 @@
+1. Describe an analogy for relating an algorithm that has efficiency O(1) and another algorithm that has O(2^n). An example would be:
+  An algorithm that has O(1) is a Cheetah and an algorithm that has O(2^n) is a Snail.
+
+    An algorithm that has O(1) takes constant time to execute no matter how big the input size is. An algorithm that has O(2^n) takes exponential time to execute even with a small size of input. Thus the former algorithm is like the latest model of CPU and the latter algorithm is like the first computer 'ENIAC'.
+
+
+
+2. In plain English, what is the best case scenario for binary search?
+
+    The target item is located in the middle of the collection.
+
+
+
+3. In plain English, what is the worst-case scenario for binary search?
+
+    The target item is located in the beginning of the collection or at the end of the collection.
+
+
+4. In plain English, what is the bounded-case scenario for binary search?
+
+    The target item is located between the middle item and the leftmost/rightmost item.
+
+5. Create a graph using the data below. Here's a CSV with the values you'll need.
+
+    <data>
+    0,1
+    1,2
+    2,4
+    3,8
+    4,16
+    5,32
+    6,64
+    7,128
+    8,256
+    9,512
+    10,1024
+
+    <functional equation>
+    f(n) = 2^n
+
+    => file name: graph_exponential_eq.png
+
+
+
+6. What's the asymptotic limit as n approaches infinity for the function defined by the values above?
+
+    The limit of 2 to the n-th power as n approaches infinity is infinity.
+
+
+
+7. What is the Big-O of an algorithm that has the data points above?
+
+    O(2^n)
+
+
+
+8. Write a Ruby script that calculates and prints the input size to iterations for the worst-case similar to the graph above for linear search.
+
+    linear_search_complexity.rb
+
+
+
+9. Create a graph from the output using Google Sheets or other graphing software. Analyze the graph and denote its Big-O somewhere on the graph.
+
+    => file name: graph_linear_search_complexity.png
+
+
+
+10. What is the Big-O of binary search?
+12. What is the Big-Ө of binary search?
+11. What is the Big-Ω of binary search?
+
+    <worst-case>
+      f(n) = lg (n) + 1    # lg: log base-2
+
+      O(f(n)) = O(lg(n) + 1) = O(lg n) (describes upper bound)
+      Ω(f(n)) = Ω(lg(n) + 1) = Ω(lg n) (descirbes lower bound)
+
+      Thus binary search for the worst-case is Ө(lg n). (describes tight bound)
+
+    <best-case>
+      f(n) = 1    # first element is the one it is looking for
+
+      O(f(n)) = O(1)
+      Ω(f(n)) = Ω(1)
+
+      Thus binary search for the best-case is Ө(1).
